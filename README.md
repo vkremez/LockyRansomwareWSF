@@ -2,7 +2,7 @@
 
 **Source:** https://www.flashpoint-intel.com/anatomy-locky-zepto-ransomware/
 
-**Source:**
+**Source:** http://www.vkremez.com/2017/02/trojan-downloaderjslocky-deobfuscate.html
 ```
 Usage: python LockyExtractor.py 
 Enter jscript file name with jscript extension: <path to the local JScript loader file>
