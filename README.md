@@ -1,6 +1,6 @@
 # Locky Indicator of Compromise (IOC) JSCRIPT Extractor
 
-**Source:** https://www.flashpoint-intel.com/anatomy-locky-zepto-ransomware/**
+**Source:** https://www.flashpoint-intel.com/anatomy-locky-zepto-ransomware/
 
 **Source:**
 ```
