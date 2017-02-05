@@ -1,4 +1,5 @@
-# Decodes Locky payload indicators of compromise (IOCs)
+# Decodes Locky JSCRIPT loaders and obtains payload indicators of compromise (IOCs)
+# Python3
 
 import re
 import base64
@@ -15,7 +16,7 @@ class LockyPayload():
         self._payload_uri_1 = None
         self._payload_uri_2 = None
         self._payload_uri_3 = None
-        self._try_var = None
+        self._extension = None
 
     def parse_lines(self):
         java_lines = filter(None, (line.rstrip() for line in self._jscript.readlines()))
@@ -56,13 +57,13 @@ class LockyPayload():
                             self._payload_uri_3 = base64.b64decode(
                                 triple_line[2].replace('"', "").replace(self._padding_word, "")).decode('utf-8')
                 elif try_activate is True:
-                    self._try_var = re.findall('"[^"]+"', line)[0].replace('"', "")
+                    self._extension = re.findall('"[^"]+"', line)[0].replace('"', "")
                     try_activate = False
                 else:
                     pass
-            self._payload_uri_1 += self._try_var
-            self._payload_uri_2 += self._try_var
-            self._payload_uri_3 += self._try_var
+            self._payload_uri_1 += self._extension
+            self._payload_uri_2 += self._extension
+            self._payload_uri_3 += self._extension
         else:
             print("No jscript file loaded")
 
@@ -82,20 +83,18 @@ class LockyPayload():
         return self._payload_uri_2
 
     def dictionary(self):
-
         data_dict = {
             'File Name': self._file_name,
             'XOR Key': self._xor_key,
             'URI 1': self._payload_uri_1,
             'URI 2': self._payload_uri_2,
             'URI 3': self._payload_uri_3,
-            'Extension': self._try_var,
+            'Extension': self._extension,
         }
-
         return data_dict
 
 if __name__ == "__main__":
-    name = input("Enter jscript file name with jscript extension: ")  # Python 3
+    name = input("Enter jscript file name with jscript extension: ") 
     LP = LockyPayload(jscript_file=name)
     LP.parse_lines()
     print(LP.dictionary())
