@@ -1,10 +1,11 @@
 # Locky Indicator of Compromise (IOC) JSCRIPT Extractor
 
-Source: **https://www.flashpoint-intel.com/anatomy-locky-zepto-ransomware/**
+**Source:** https://www.flashpoint-intel.com/anatomy-locky-zepto-ransomware/**
 
-Source:
+**Source:**
 ```
-Usage: **python LockyExtractor.py --> path to the local JScript Locky file.
+Usage: python LockyExtractor.py 
+Enter jscript file name with jscript extension: <path to the local JScript loader file>
 ```
 **Goal**: Assist analysts with decoding and obtain relevant information from Locky HTA Application (HTA) and Windows Script File (WSF) JSCRIPT loaders.
 
@@ -12,9 +13,9 @@ Locky ransomware was notorious for its usage of the second-stage JavaScript and 
 
 **These are classic simple XOR-ed .wsf/.hta SCRIPT payloads used by this gang.**
 
-For example, let’s take a look at this:
+For example, let’s take a look at the following Locky HTA JSCRIPT loader:
 ```
-**sample 3d91a6ffed8b038363a0ead0f8985d1bdf88ba543aff0bcab048819d70455073.jscript.**
+sample: 3d91a6ffed8b038363a0ead0f8985d1bdf88ba543aff0bcab048819d70455073.jscript.
 ```
 
 **Padding word:**
@@ -25,7 +26,7 @@ LICIZAX
 ```
 b6vYxEjsTYwJ7mIrZz4WFSGHeaddkwbq
 ```
-**Payload URI: (*remove padding word and decode Base64): **
+**Payload URI: (remove padding word and decode Base64):**
 ```
 goldenladywedding[.]com/vdG76VUY76rjnu?CHhjpz=zhXHhhwS
 www[.]jmetalloysllp[.]com/vdG76VUY76rjnu?CHhjpz=zhXHhhwS
